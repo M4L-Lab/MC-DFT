@@ -1,0 +1,23 @@
+Define the MC Temperature
+"Temp = 100"
+
+running VASP with total 128 cores (128 should be consist with your sbatsh files)
+"subprocess.run([ 'mpirun', '-n','128', 'vasp_std'])"
+
+
+Define the the range of MC-DFT steps. the initial one is from 0.
+Due to the time limit, it is not possible to finish 1000 step.
+"for step in range(0, 1000)"
+
+If the jobs stop at step-400 because of the maximum time limitation of HPC.
+Before you submit the sbatch file again.
+remove the last folder created by MC-DFT.py, in this case, is step-400.
+VASP calculation in step-400 is not finished yet,
+then set 
+"for step in range(0, 1000)"
+to
+"for step in range(400, 1000)"
+
+There should be a series of file folder called step_0, step_1, step_2,...
+And there is one energy.txt file contain
+## step.   the total energy.   accetptance (1 for accepted, 0 for declined)
