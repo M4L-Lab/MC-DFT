@@ -1,4 +1,6 @@
-Define the MC Temperature
+This script (MC-DFT.py) couples DFT calculations with MC simulations to find MECs by randomly swapping the chemical elements between atom locations.
+
+Define the MC Temperature (K)
 "Temp = 100"
 
 running VASP with total 128 cores (128 should be consist with your sbatsh files)
