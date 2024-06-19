@@ -27,7 +27,7 @@ def getF(file):
 random.seed()
 kB = 1./11604.
 
-## Monte Carlo Temperature
+## Set Monte Carlo Temperature (K)
 Temp = 100
 
 
